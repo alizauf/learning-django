@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+
+    <head>
+        <title>Rango</title>
+    </head>
+
+    <body>
+        <h1>About</h1>
+        <h2>Sometimes Ben and I do puzzles</h2>
+        <p> <strong>{{ benmessage }} <em><--This came in with a template. Neat!</em></strong></p>
+        
+        <img src="{% static "images/aliza-ben-puzzled-2.jpg" %}" alt="We're Puzzled" width="500"/> <!-- New line -->
+   		<p>But this is a New York Times Puzzle</p>
+   		<p><a href="/rango/">Return to the hawk page</a></p>
+    </body>
+
+</html>
+

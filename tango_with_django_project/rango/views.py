@@ -17,4 +17,7 @@ def index(request):
     return render(request, 'rango/index.html', context_dict)
 
 def about(request):
-	return HttpResponse("About us! <br /><a href='/rango/'>Let's go back to the index.</a>")
+	context_dict = {'benmessage': "We like to do the Harper's Puzzle"}
+	return render(request, 'rango/about.html', context_dict)
+
+	#return HttpResponse("About us! <br /><a href='/rango/'>Let's go back to the index.</a>")
