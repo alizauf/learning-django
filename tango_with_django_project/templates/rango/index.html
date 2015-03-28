@@ -13,6 +13,7 @@
     <body>
         <h1>I saw a hawk one day...</h1>
         
+        <h2>Here are some categories</h2>
        {% if categories %}
             <ul>
                 {% for category in categories %}
@@ -24,6 +25,16 @@
             <strong>There are no categories present.</strong>
        {% endif %}
         
+        <h2> Here are the 5 most-viewed pages</h2>
+        {% if pages %}
+        	<ol>
+        		{% for page in pages %}
+        		<li><a href="{{ page.url}}">{{ page.title }}</a> -- {{ page.views }} Views!</li>
+        		{% endfor %}
+        	</ol>
+        {% else %}
+        	<strong>Ain't no pages</strong>
+        {% endif %}
         <br />
         hello world! <strong>{{ boldmessage }}</strong><br />
         <a href="/rango/about/">About</a><br />
