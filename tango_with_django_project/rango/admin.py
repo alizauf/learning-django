@@ -4,9 +4,9 @@ from rango.models import Category, Page
 class CategoryAdmin(admin.ModelAdmin):
 	fieldsets = [
 		(None, {'fields': ['name']}),
-		('Interaction Information', {'fields': ['likes', 'views']}),
+		('Interaction Information', {'fields': ['likes', 'views', 'slug']}),
 		]
-	list_display = ('name', 'likes', 'views')
+	list_display = ('name', 'likes', 'views', 'slug')
 
 admin.site.register(Category, CategoryAdmin)
 
